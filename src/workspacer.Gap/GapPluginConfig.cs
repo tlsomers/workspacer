@@ -1,18 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace workspacer.Gap
 {
-    using System.Diagnostics.Eventing.Reader;
-
     public class GapPluginConfig
     {
         public int InnerGap { get; set; } = 0;
         public int OuterGap { get; set; } = 0;
-        public int Delta { get; set; } = 0;
+        public int Delta { get; set; } = 20;
 
         public bool OnFocused { get; set; } = true;
 

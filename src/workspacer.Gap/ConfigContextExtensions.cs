@@ -1,13 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace workspacer.Gap
 {
-    using System.Runtime.CompilerServices;
-
     public static class ConfigContextExtensions
     {
         public static GapPlugin AddGap(this IConfigContext context, GapPluginConfig config)
@@ -17,7 +11,7 @@ namespace workspacer.Gap
 
             context.AddLayoutProxy((layout) =>
             {
-                var gapLayout = new GapLayoutEngine(layout, config.InnerGap, config.OuterGap, config.Delta, config.OnFocused);
+                var gapLayout = new GapLayoutEngine(layout, config);
                 plugin.RegisterLayout(gapLayout);
                 return gapLayout;
             });
